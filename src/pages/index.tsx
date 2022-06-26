@@ -7,10 +7,7 @@ import { FormEvent, useState } from 'react'
 
 import CodeMockupImage from '../../public/assets/code-mockup.png'
 import { Logo } from '../components/Logo'
-import {
-  CreateSubscriberMutationResponse,
-  CREATE_SUBSCRIBER_MUTATION,
-} from '../graphql/create-subscriber-mutation'
+import { useCreateSubscriberMutation } from '../graphql/generated'
 
 const HomePage: NextPage = () => {
   const [name, setName] = useState('')
@@ -18,9 +15,7 @@ const HomePage: NextPage = () => {
 
   const router = useRouter()
 
-  const [createSubscriber, { loading }] = useMutation(
-    CREATE_SUBSCRIBER_MUTATION
-  )
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation()
 
   const handleSubscribe = async (e: FormEvent) => {
     e.preventDefault()
