@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import { Header } from '../../components/Header'
 import { Sidebar } from '../../components/Sidebar'
-import { VideoPlayer } from '../../components/VideoPlayer'
 
 const EventPage: NextPage = () => {
   return (

@@ -5,7 +5,7 @@ import { format, isPast } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { toTitle } from '../utils/to-title'
 import { useRouter } from 'next/router'
-import { EventPageParams } from '../pages/event/lesson/[slug]'
+import { LessonSlugPageParams } from '../pages/event/lesson/[slug]'
 
 import classNames from 'classnames'
 
@@ -21,7 +21,7 @@ const DATE_SEPARATOR = "' • '"
 export const Lesson: FC<LessonProps> = (props) => {
   const router = useRouter()
 
-  const { slug } = router.query as never as EventPageParams
+  const { slug } = router.query as never as LessonSlugPageParams
 
   const isActiveLesson = slug === props.slug
 

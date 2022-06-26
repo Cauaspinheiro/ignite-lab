@@ -11,12 +11,11 @@ import {
 import { FC } from 'react'
 
 import '@vime/core/themes/default.css'
-import { useQuery } from '@apollo/client'
 
 import dynamic from 'next/dynamic'
 import { useGetLessonBySlugQuery } from '../graphql/generated'
 
-const VimePlayer = dynamic(() => import('./VimePlayer'), { ssr: true })
+const VimePlayer = dynamic(() => import('./VimePlayer'), { ssr: false })
 
 export interface VideoPlayerProps {
   lessonSlug: string

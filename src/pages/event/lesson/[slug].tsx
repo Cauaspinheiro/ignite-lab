@@ -4,14 +4,14 @@ import { Header } from '../../../components/Header'
 import { Sidebar } from '../../../components/Sidebar'
 import { VideoPlayer } from '../../../components/VideoPlayer'
 
-export interface EventPageParams {
+export interface LessonSlugPageParams {
   slug: string
 }
 
-const EventPage: NextPage = () => {
+const LessonSlugPage: NextPage = () => {
   const router = useRouter()
 
-  const { slug } = router.query as never as EventPageParams
+  const { slug } = router.query as never as LessonSlugPageParams
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -26,4 +26,4 @@ const EventPage: NextPage = () => {
   )
 }
 
-export default EventPage
+export default LessonSlugPage
