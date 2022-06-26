@@ -1,21 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Header } from '../components/Header'
-import { Sidebar } from '../components/Sidebar'
-import { VideoPlayer } from '../components/VideoPlayer'
+import { NextPage } from 'next'
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-
-      <main className="flex flex-1">
-        <VideoPlayer />
-
-        <Sidebar />
-      </main>
+    <div>
+      <h1>Home</h1>
     </div>
   )
 }
 
-export default Home
+export default HomePage

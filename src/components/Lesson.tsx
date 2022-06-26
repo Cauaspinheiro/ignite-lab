@@ -16,8 +16,8 @@ const DATE_SEPARATOR = "' • '"
 
 export const Lesson: FC<LessonProps> = (props) => {
   return (
-    <Link href={`#${props.slug}`}>
-      <a>
+    <Link href={`/event/lesson/${props.slug}`}>
+      <a className="group">
         <span className="text-gray-300">
           {toTitle(
             format(
@@ -28,7 +28,7 @@ export const Lesson: FC<LessonProps> = (props) => {
           )}
         </span>
 
-        <div className="rounded border border-gray-500 p-4 mt-2">
+        <div className="rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 transition-colors">
           <header className="flex items-center justify-between">
             {isPast(props.availableAt) ? (
               <span className="text-sm text-blue-500 font-medium flex items-center gap-2">
