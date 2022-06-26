@@ -4,7 +4,7 @@ import { Header } from '../../../components/Header'
 import { Sidebar } from '../../../components/Sidebar'
 import { VideoPlayer } from '../../../components/VideoPlayer'
 
-interface EventPageParams {
+export interface EventPageParams {
   slug: string
 }
 
